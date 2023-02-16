@@ -2,7 +2,7 @@
 /**
  *
  * main - main block
- * return: 0
+ * Return: o
  */
 int main(void)
 {
