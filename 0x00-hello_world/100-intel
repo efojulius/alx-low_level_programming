@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the input file name from the $CFILE environment variable
+if [ -z "$CFILE" ]; then
+  echo "Error: C file name not set. Please set the CFILE environment variable."
+  exit 1
+fi
+
+# Set the output file name
+ASMFILE="${CFILE%.c}.s"
+
+# Compile the C code to assembly code using gcc
+gcc -S -masm=intel "$CFILE" -o "$ASMFILE"
